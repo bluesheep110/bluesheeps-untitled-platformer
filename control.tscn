@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cdpjtxcd2idrl"]
+
+[ext_resource type="Script" uid="uid://3mv2weqgp56q" path="res://TitleScreen.gd" id="1_0fbet"]
+[ext_resource type="AudioStream" uid="uid://cwbb1caig0iog" path="res://title.mp3" id="2_62e2m"]
+
+[node name="Control" type="Control" unique_id=1714235458]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="Button" type="Button" parent="." unique_id=1289226264]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 344.0
+offset_right = 700.0
+offset_bottom = 515.0
+text = "start"
+script = ExtResource("1_0fbet")
+
+[node name="Title" type="AudioStreamPlayer2D" parent="." unique_id=507939290]
+position = Vector2(503, 275)
+stream = ExtResource("2_62e2m")
+volume_db = 10.692
+autoplay = true
+max_distance = 1991.0
+panning_strength = 0.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
